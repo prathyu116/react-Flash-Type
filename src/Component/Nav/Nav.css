@@ -1,0 +1,24 @@
+.nav-container{
+    display: flex;
+    height: 75px;
+    align-items: center;
+    background: #1d2020;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    z-index: 100;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+.flash-log{
+    margin-left: 20px;
+    height: 40px;
+}
+.flash-logo-text{
+    font-family: "Bangers",cursive;
+    font-size: 60px;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    color: #e6e7e7;
+}
