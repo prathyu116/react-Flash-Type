@@ -1,0 +1,27 @@
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.details-container:hover{
+    box-shadow: rgba(38, 29, 29, 0.337) 0px 20px 30px, rgba(40, 113, 182, 0.23) 0px 16px 16px;
+
+  
+
+}
+.card-name{
+    font-size: 20px;
+    margin-bottom: -9px;
+    
+}
+.card-value{
+    font-size: 50px;
+    font-weight: 500px;
+    margin: 0;
+}
