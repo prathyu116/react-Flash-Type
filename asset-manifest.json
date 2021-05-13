@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-Flash-Type/static/css/main.a7373baf.chunk.css",
+    "main.js": "/react-Flash-Type/static/js/main.978406ad.chunk.js",
+    "main.js.map": "/react-Flash-Type/static/js/main.978406ad.chunk.js.map",
+    "runtime-main.js": "/react-Flash-Type/static/js/runtime-main.ccf10577.js",
+    "runtime-main.js.map": "/react-Flash-Type/static/js/runtime-main.ccf10577.js.map",
+    "static/js/2.f9ea682a.chunk.js": "/react-Flash-Type/static/js/2.f9ea682a.chunk.js",
+    "static/js/2.f9ea682a.chunk.js.map": "/react-Flash-Type/static/js/2.f9ea682a.chunk.js.map",
+    "index.html": "/react-Flash-Type/index.html",
+    "precache-manifest.2d60bcca9a1b29c1e2df0c690dc5663d.js": "/react-Flash-Type/precache-manifest.2d60bcca9a1b29c1e2df0c690dc5663d.js",
+    "service-worker.js": "/react-Flash-Type/service-worker.js",
+    "static/css/main.a7373baf.chunk.css.map": "/react-Flash-Type/static/css/main.a7373baf.chunk.css.map",
+    "static/js/2.f9ea682a.chunk.js.LICENSE.txt": "/react-Flash-Type/static/js/2.f9ea682a.chunk.js.LICENSE.txt",
+    "static/media/hero.png": "/react-Flash-Type/static/media/hero.6c0b8d67.png",
+    "static/media/logo.png": "/react-Flash-Type/static/media/logo.f6028f31.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ccf10577.js",
+    "static/js/2.f9ea682a.chunk.js",
+    "static/css/main.a7373baf.chunk.css",
+    "static/js/main.978406ad.chunk.js"
+  ]
+}
