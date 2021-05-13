@@ -1,7 +1,10 @@
 import React from 'react'
+import TestLetter from '../TestLetter/TestLetter';
 import './RealTypingChallenge.css'
 
-const RealTypingChallenge = ({selectedparagraph,TimeStarted,TimeRemain}) => {
+const RealTypingChallenge = ({selectedparagraph,TimeStarted,TimeRemain,testInfo,onInputChange}) => {
+    // console.log('inside real typing challenge =>',testInfo);
+    
     return (
         <div className="typing-challenge">
             <div className="timer-container">
@@ -13,12 +16,18 @@ const RealTypingChallenge = ({selectedparagraph,TimeStarted,TimeRemain}) => {
             <div className="text-area-container">
                 <div className="left-text-area">
                     <div className="textarea test-paragraph">
-                        {selectedparagraph}
+                        {/* {selectedparagraph} */}
+                        {
+                            testInfo.map((individualLetter,index)=>{
+                              return <TestLetter key={index} testinfoletter={individualLetter}/> 
+                            })
+                        }
                     </div>
                     
                 </div>
                 <div className="right-text-area">
-                    <textarea className="textarea" placeholder="start typing here" >
+                    <textarea className="textarea" placeholder="start typing here"  onChange ={(e)=>onInputChange(e.target.value)}>
+                       
 
                     </textarea>
                     

@@ -3,7 +3,7 @@ import ChallengeDetailsCard from '../ChallengeDetailsCard/ChallengeDetailsCard'
 import RealTypingChallenge from '../RealTypingChallenge/RealTypingChallenge'
 import './TypingChallengeContainer.css'
 
-const TypingChallengeContainer = ({word ,character,wpm,SelectedParagraph,TimeRemain,TimeStarted}) => {
+const TypingChallengeContainer = ({word ,character,wpm,SelectedParagraph,TimeRemain,TimeStarted,testInfo,onInputChange}) => {
     return (
         <div className="typing-challenge-container">
 
@@ -21,7 +21,7 @@ const TypingChallengeContainer = ({word ,character,wpm,SelectedParagraph,TimeRem
             </div>
             {/*REAL CHALLENGE */}
             <div className="real-challenge-section">
-                <RealTypingChallenge TimeRemain={TimeRemain} TimeStarted={TimeStarted} selectedparagraph={SelectedParagraph} />
+                <RealTypingChallenge onInputChange={onInputChange} testInfo={testInfo} TimeRemain={TimeRemain} TimeStarted={TimeStarted} selectedparagraph={SelectedParagraph} />
                 
 
             </div>

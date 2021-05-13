@@ -2,7 +2,7 @@ import React from 'react'
 import TestContainer from '../TestContainer/TestContainer'
 import './ChallengeSection.css'
 
-const ChallengeSection = ({SelectedParagraph,words,character,speed,TimeRemain,TimeStarted}) => {
+const ChallengeSection = ({SelectedParagraph,words,character,speed,TimeRemain,TimeStarted,testInfo,onInputChange,startAgain}) => {
     return (
         <div className="challenge-section-container">
             
@@ -15,6 +15,9 @@ const ChallengeSection = ({SelectedParagraph,words,character,speed,TimeRemain,Ti
                 SelectedParagraph={SelectedParagraph}
                 TimeRemain={TimeRemain}
                 TimeStarted={TimeStarted}
+                testInfo={testInfo}
+                onInputChange={onInputChange}
+                startAgain={startAgain}
                 
                 />
 

@@ -1,25 +1,25 @@
 import React from 'react'
 import './TryAgain.css'
 
-const TryAgain = ({word,character,wpm}) => {
+const TryAgain = ({word,character,wpm,startAgain}) => {
     return (
         <div className="try-again-container">
-            <h1>test result</h1>
+            <h1>Test Result</h1>
             <div className="result-container">
-                <p>
-                    <b>Character=</b>{character}
-                </p>
-                <p>
-                    <b>Word=</b>{word}
-                </p>
-                <p>
-                    <b>wpm=</b>{wpm}
-                </p>
+                
+                    <h2>Characters:{character} </h2>
+                
+                
+                    <h2>Words:{word}</h2>
+                
+                
+                    <h2>Your Speed:{wpm}</h2>
+                
 
 
             </div>
             <div>
-                <button className="start-again-button">Re-try</button>
+                <button onClick={()=>startAgain()} className="start-again-button">Re-try</button>
             </div>
         </div>
     )
