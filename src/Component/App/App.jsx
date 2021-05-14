@@ -3,9 +3,12 @@ import ChallengeSection from '../ChallengeSection/ChallengeSection'
 import Footer from '../Footer/Footer'
 import Landing from '../Landing/Landing'
 import Nav from '../Nav/Nav'
+
+import { SAMPLE_PARAGRAPHS } from "../../data/sampleParagraph";
+
 import './App.css'
 
-const TotalTime=60;
+const TotalTime=6;
 const URL='http://metaphorpsum.com/paragraphs/1/9'
 const defaultState ={
   SelectedParagraph:"hello world",
@@ -18,6 +21,23 @@ const defaultState ={
 }
 class App extends React.Component{
   state=defaultState;
+
+  fetchNewParagraphFallback = () => {
+    const data =
+    SAMPLE_PARAGRAPHS[
+        Math.floor(Math.random() * SAMPLE_PARAGRAPHS.length)
+    ];
+    const SelectedParagraphArray = data.split("")
+  
+    const testInfo= SelectedParagraphArray.map((selectedLetter)=>{
+      return {
+        testLetter:selectedLetter,
+        status:"not attempted"
+      }
+    })
+    this.setState({...defaultState, testInfo,SelectedParagraph:data})
+};
+
 
   fetchNewPara = ()=>{
     fetch(URL).then((response)=>response.text()).then((data)=>{
@@ -38,7 +58,7 @@ class App extends React.Component{
   }
 
 componentDidMount(){
-  this.fetchNewPara()
+  this.fetchNewParagraphFallback()
   
 
 }
@@ -64,7 +84,7 @@ const timer = setInterval(()=>{
 }, 1000)
 
 };
-startAgain = () =>this.fetchNewPara()
+startAgain = () =>this.fetchNewParagraphFallback()
 userHandleInput =(inputvalue)=>{
  if(!this.state.TimeStarted) this.startTimer();
 
