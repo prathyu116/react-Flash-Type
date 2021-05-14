@@ -8,7 +8,7 @@ import { SAMPLE_PARAGRAPHS } from "../../data/sampleParagraph";
 
 import './App.css'
 
-const TotalTime=6;
+const TotalTime=60;
 const URL='http://metaphorpsum.com/paragraphs/1/9'
 const defaultState ={
   SelectedParagraph:"hello world",
