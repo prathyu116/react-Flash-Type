@@ -85,31 +85,54 @@ const timer = setInterval(()=>{
 
 };
 startAgain = () =>this.fetchNewParagraphFallback()
+
+// input hamdling function
 userHandleInput =(inputvalue)=>{
  if(!this.state.TimeStarted) this.startTimer();
 
  const  character=inputvalue.length;
  const words=inputvalue.split(" ").length;
  const index =character - 1;
- if(index < 0){
-   this.setState({
-     testInfo:[
-       {
-         testLetter:this.state.testInfo[0].testLetter,
-         status:"not attempted"
-       },
-       ...this.state.testInfo.slice(1),
-     ],
-     character,
-     words
-   });
-   return;
- }
+/*
+1.================>UnderFlow Case<===================
+*/
+
+    if(index < 0){
+    this.setState({
+    testInfo:[
+    {
+    testLetter:this.state.testInfo[0].testLetter,
+    status:"not attempted"
+    },
+    ...this.state.testInfo.slice(1),
+    ],
+    character,
+    words
+    });
+    return;
+    }
+/*
+=============>UnderFlow Case End<=================
+*/
+
+/*
+2.================>OverFlow Case<===================
+*/
+
  if (index >= this.state.SelectedParagraph.length){
    this.setState({character,words});
    return;
 
  }
+/*
+================>OverFlow Case End<===================
+*/
+
+/*
+3.================>Back Space Case<===================
+*/
+
+
  //make the copy of test info
  const testInfo = this.state.testInfo;
  if(!(index===this.state.SelectedParagraph.length - 1)){
@@ -127,7 +150,11 @@ userHandleInput =(inputvalue)=>{
    })
 
  }
-}
+ /*
+================>Back Space Case End<===================
+*/
+
+};
 
   render(){
  
